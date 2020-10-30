@@ -87,10 +87,10 @@ def save(name, direct, df):
     df.to_csv(path, encoding='utf-8')
     print("Download complete")
 
-director = '/home/user/Data_cash/N00001050'
-os.makedirs(director)
-naming = '/%s.csv'
-directory = director + naming
+directory = '/home/user/Data_cash/N00001050/%s.csv'
+#os.makedirs(director)
+#naming = '/%s.csv'
+director = '/home/user/Data_cash/N00001050/'
 #directory = 'C:/Users/tred1/Desktop/CORD-19/%s.csv'
 
 key_phrase = "Russia"
@@ -100,6 +100,4 @@ connect(source='https://cord19.vespa.ai/', name='CORD-19 Search')
 df_rez = receiving(query=key_phrase, hits=number_of_results)
 save(name=key_phrase, direct=directory, df=df_rez)
 check(direct=director)
-
-
 
