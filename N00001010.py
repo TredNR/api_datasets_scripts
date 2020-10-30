@@ -34,7 +34,7 @@ def authentication():
 # Receiving data
 
 # Data integrity check
-writepath='/home/user/Data_cash/N0001010/check_info.txt'
+writepath='/home/user/Data_cash/N00001010/check_info.txt'
 
 def check(direct):
     mode = 'a' if os.path.exists(writepath) else 'w'
@@ -66,7 +66,7 @@ def save(source, name, direct):
     api.dataset_download_files(dataset=source, path=direct, force=False, quiet=True, unzip=True)
     print("Download complete")
 
-directory = '/home/user/Data_cash/N0001010'
+directory = '/home/user/Data_cash/N00001010'
 
 query_dataset = 'https://www.kaggle.com/'
 query_dataset_url = 'sudalairajkumar/novel-corona-virus-2019-dataset'
